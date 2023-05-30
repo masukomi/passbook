@@ -66,7 +66,7 @@ module Passbook
     end
 
     def file_data(data)
-      raise "file_data passed nil" if data.nil?
+      raise "Passbook::Signer#file_data was passed nil" if data.nil?
       return data if data.is_a? String
 
       data.respond_to?(:read) ? data.read : File.read(data)
